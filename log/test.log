@@ -1,0 +1,53 @@
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151023030648')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151023004053')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pictures" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-23 15:20:56', '2015-10-23 15:20:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pictures" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-23 15:20:56', '2015-10-23 15:20:56', 298486374)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+PictureTryControllerTest: test_should_be_invalid_if_title_is_missing
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pictures" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-23 15:22:53', '2015-10-23 15:22:53', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "pictures" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-23 15:22:53', '2015-10-23 15:22:53', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+PictureTryControllerTest: test_should_be_invalid_if_title_is_missing
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+PictureTryControllerTest: test_should_get_happening_now
+-------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "pictures"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pictures" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-23 15:25:24', '2015-10-23 15:25:24', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "pictures" ("title", "description", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-23 15:25:24', '2015-10-23 15:25:24', 298486374)[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+PictureTryControllerTest: test_should_be_invalid_if_image_is_missing
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+PictureTryControllerTest: test_should_be_invalid_if_title_is_missing
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction

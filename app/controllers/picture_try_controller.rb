@@ -1,0 +1,2 @@
+class PictureTryController < ApplicationController
+end

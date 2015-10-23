@@ -1,0 +1,8 @@
+#pictures.transitions-enabled
+  - @pictures.each do |picture|
+    .box.panel.panel-default
+      = link_to (image_tag picture.image.url(:medium)), picture
+      .panel-body
+        %h2= link_to picture.title
+      .panel-body.pull-right  
+        = social_share_button_tag(picture.title)
